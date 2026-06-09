@@ -1,14 +1,7 @@
-#!/sbin/sh
-# ========================================================
-#     AnyKernel3 - ProDev Douyin Aesthetic Edition
-#     Clean • Elegant • Premium Chinese Style
-# ========================================================
-# Author     : Kyzuna
-# Style      : Douyin Pro Aesthetic
-# Devices    : Beryllium • Dipper • Equuleus • Perseus • Polaris • Ursa
-# ========================================================
+### AnyKernel3 Ramdisk Mod Script
+## osm0sis @ xda-developers
 
-## AnyKernel setup
+### AnyKernel setup
 # begin properties
 properties() { '
 kernel.string=Kyzuna Kernel • AiryStrix Next 

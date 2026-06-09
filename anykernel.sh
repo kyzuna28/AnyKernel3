@@ -40,21 +40,21 @@ patch_vbmeta_flag=auto;
 # boot install
 dump_boot; # use split_boot to skip ramdisk unpack, e.g. for devices with init_boot ramdisk
 
-# ─── FINAL PRODEV UI: CLEAN MONO + EMOJI ───
+# ─── STYLE 2: CLEAN MONO (UPDATED) ───
 ui_print " ";
-ui_print "  ⬢  𝗞𝗬𝗭𝗨𝗡𝗔 𝗣𝗥𝗢𝗝𝗘𝗖𝗧  ✨";
-ui_print "     [ 📱 device : sdm845 // 🧑‍💻 by : seleax×kyy ]";
+ui_print "  ⬢  𝗞𝗬𝗭𝗨𝗡𝗔 𝗣𝗥𝗢𝗝𝗘𝗖𝗧";
+ui_print "     [ device: beryllium // by: selea×kyy ]";
 ui_print " ";
-ui_print "  ➔  ⚙️  𝘀𝘁𝗮𝘁𝘂𝘀 : initializing script environment";
-ui_print "     ▫ 📦 extracting image partitions...";
-ui_print "     ▫ 🧬 executing dynamic patchers...";
+ui_print "  ➔  𝘀𝘁𝗮𝘁𝘂𝘀 : initializing script environment";
+ui_print "     ▫ extracting image partitions";
+ui_print "     ▫ executing dynamic patchers";
 ui_print " ";
-ui_print "  ➔  ⚡  𝘀𝘁𝗮𝘁𝘂𝘀 : writing modifications";
+ui_print "  ➔  𝘀𝘁𝗮𝘁𝘂𝘀 : writing modifications";
 
 write_boot; # use flash_boot to skip ramdisk repack, e.g. for devices with init_boot ramdisk
 
-ui_print "     ▫ 💾 synchronization successfully...";
-ui_print "  ✔  🚀  𝘀𝘁𝗮𝘁𝘂𝘀 : core flash completed";
+ui_print "     ▫ synchronization successfully";
+ui_print "  ✔  𝘀𝘁𝗮𝘁𝘂𝘀 : core flash completed";
 ui_print " ";
 ## end boot install
 

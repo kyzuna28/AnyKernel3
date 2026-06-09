@@ -4,35 +4,27 @@
 ### AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Kyzuna Kernel • AiryStrix Next 
+kernel.string=Kyzuna :: Secure Architecture :: Engine
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-
 device.name1=beryllium
 device.name2=dipper
 device.name3=equuleus
 device.name4=perseus
 device.name5=polaris
 device.name6=ursa
-
 supported.versions=
 supported.patchlevels=
 '; } # end properties
 
-## AnyKernel install
+### AnyKernel install
 # begin attributes
 attributes() {
-    ui_print " "
-    ui_print "   ✨━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━✨"
-    ui_print "    🛡️ Kyzuna Kernel - Architecture Next 🛡️"
-    ui_print "   ✨━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━✨"
-    ui_print " "
-
-    set_perm_recursive 0 0 755 644 $ramdisk/*;
-    set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
+set_perm_recursive 0 0 755 644 $ramdisk/*;
+set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 } # end attributes
 
 
@@ -48,7 +40,22 @@ patch_vbmeta_flag=auto;
 # boot install
 dump_boot; # use split_boot to skip ramdisk unpack, e.g. for devices with init_boot ramdisk
 
+# ─── FINAL PRODEV UI: CLEAN MONO + EMOJI ───
+ui_print " ";
+ui_print "  ⬢  𝗞𝗬𝗭𝗨𝗡𝗔 𝗣𝗥𝗢𝗝𝗘𝗖𝗧  ✨";
+ui_print "     [ 📱 device : sdm845 // 🧑‍💻 by : seleax×kyy ]";
+ui_print " ";
+ui_print "  ➔  ⚙️  𝘀𝘁𝗮𝘁𝘂𝘀 : initializing script environment";
+ui_print "     ▫ 📦 extracting image partitions...";
+ui_print "     ▫ 🧬 executing dynamic patchers...";
+ui_print " ";
+ui_print "  ➔  ⚡  𝘀𝘁𝗮𝘁𝘂𝘀 : writing modifications";
+
 write_boot; # use flash_boot to skip ramdisk repack, e.g. for devices with init_boot ramdisk
+
+ui_print "     ▫ 💾 synchronization successfully...";
+ui_print "  ✔  🚀  𝘀𝘁𝗮𝘁𝘂𝘀 : core flash completed";
+ui_print " ";
 ## end boot install
 
 
@@ -98,10 +105,3 @@ write_boot; # use flash_boot to skip ramdisk repack, e.g. for devices with init_
 
 #write_boot; # use flash_boot to skip ramdisk repack, e.g. for dtb on devices with hdr v4 but no vendor_kernel_boot
 ## end vendor_boot install
-
-
-# Final Message
-ui_print " "
-ui_print "   ☸️ Kyzuna Kernel • Installed Successfully ☸️"
-ui_print "   ✨ Optimization & Performance Perfected ✨"
-ui_print " "
